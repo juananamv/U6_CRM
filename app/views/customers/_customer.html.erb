@@ -1,4 +1,4 @@
 <h1><%= customer.full_name %></h1>
-<%= image_tag(customer.image) %>
-<p><%= customer.phone_number %></p>
-<p><%= customer.email %></p>
+<%= image_tag(customer.image, size: "200") if customer.image.attached?%>
+<p>Phone Number: <%= customer.phone_number %></p>
+<p>Email: <%= customer.email %></p>
