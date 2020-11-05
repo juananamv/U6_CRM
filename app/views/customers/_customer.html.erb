@@ -1,4 +1,10 @@
-<h1><%= customer.full_name %></h1>
-<%= image_tag(customer.image, size: "200") if customer.image.attached?%>
-<p>Phone Number: <%= customer.phone_number %></p>
-<p>Email: <%= customer.email %></p>
+<div class="card p-3" style="height: 100%">
+  <p class="title is-size-4 mb-5"><%= customer.full_name %></p>
+  <figure class="image">
+    <%= image_tag(customer.image, style: 'width: 160') if customer.image.attached?%>
+  </figure>
+  <p class="mb-5"><strong>Phone:</strong> <%= customer.phone_number %></p>
+  <% if customer.email != '' %>
+  <p class="mt-5"><%= customer.email %></p>
+  <% end %>
+</div>
