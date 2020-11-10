@@ -12,6 +12,13 @@
   <body>
     <div class="container">
       <%= yield %>
+      <footer class="footer">
+        <ul class="has-text-centered">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Alphabetized', '/customers/alphabetized' %></li>
+          <li><%= link_to 'Missing Email', '/customers/missing_email' %></li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>
